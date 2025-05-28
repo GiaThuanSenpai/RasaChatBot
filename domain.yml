@@ -1,0 +1,221 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - job_search_how
+  - cv_creation
+  - application_status
+  - salary_info
+  - job_alerts
+  - employer_contact
+  - search_jobs_by_field
+  - reset_search
+  - clear_slots
+  - noop
+  - out_of_scope
+  - ask_cv_sections
+  - ask_cv_personal_info
+  - ask_cv_description
+  - ask_cv_education
+  - ask_cv_experience
+  - ask_cv_skills
+
+entities:
+  - industry
+  - specialization
+  - location
+  - salary
+
+slots:
+  industry:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: industry
+    influence_conversation: true
+  specialization:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: specialization
+    influence_conversation: true
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+    influence_conversation: true
+  salary:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: salary
+    influence_conversation: true
+
+responses:
+  utter_greet:  
+  - text: "Hey! How are you?"
+  - text: "Xin chào! Bạn khỏe không?"
+  - text: "Chào bạn!"
+  - text: "Chào mừng bạn đến với trợ lý ảo của mình!"
+  - text: "Chào bạn! Tôi là trợ lý ảo của bạn, tôi có thể giúp bạn tìm kiếm việc làm phù hợp với bạn."
+
+  utter_goodbye:
+  - text: "Tạm biệt! Chúc bạn tìm được công việc phù hợp!"
+  - text: "Hẹn gặp lại bạn! Nếu cần tìm việc, hãy quay lại với tôi nhé!"
+  - text: "Tạm biệt bạn. Đừng ngần ngại quay lại khi cần tư vấn về việc làm nhé!"
+  - text: "Chào tạm biệt! Chúc bạn may mắn trong công việc!"
+  - text: "Goodbye! Hãy quay lại khi bạn cần tìm cơ hội việc làm mới nhé!"
+
+  utter_iamabot:
+  - text: "Đúng rồi, tôi là một chatbot được tạo ra để giúp bạn tìm kiếm việc làm phù hợp."
+  - text: "Vâng, tôi là trợ lý ảo chuyên về tư vấn và tìm kiếm việc làm. Tôi có thể giúp gì cho bạn?"
+  - text: "Tôi là một AI chatbot, được lập trình để hỗ trợ bạn trong quá trình tìm việc và ứng tuyển."
+  - text: "Đúng vậy! Tôi là bot tư vấn việc làm, luôn sẵn sàng giúp bạn tìm được công việc phù hợp nhất."
+  - text: "Tôi là trợ lý ảo AI, được tạo ra để giúp bạn trong hành trình tìm kiếm việc làm của mình."
+
+  utter_job_search_response:
+  - text: "Xin lỗi, tôi chưa hiểu rõ yêu cầu của bạn. Bạn có thể cung cấp thêm thông tin về:\n- Ngành nghề bạn muốn tìm (ví dụ: công nghệ thông tin, tài chính, marketing...)\n- Vị trí công việc (ví dụ: lập trình viên, kế toán, nhân viên kinh doanh...)\n- Địa điểm làm việc (ví dụ: Hà Nội, Hồ Chí Minh, Đà Nẵng...)\n- Mức lương mong muốn\n\nVí dụ câu hỏi:\n- \"Tìm việc làm IT tại Hà Nội\"\n- \"Có việc làm kế toán ở Hồ Chí Minh không?\"\n- \"Tìm việc marketing lương trên 15 triệu\""
+
+  utter_please_rephrase:
+  - text: "Xin lỗi, tôi chưa hiểu rõ ý bạn. Bạn có thể diễn đạt lại một cách khác được không?"
+  - text: "Tôi không chắc mình hiểu đúng ý bạn. Bạn có thể giải thích rõ hơn được không?"
+  - text: "Xin bạn vui lòng diễn đạt lại câu hỏi một cách cụ thể hơn để tôi có thể giúp bạn tốt hơn."
+  - text: "Tôi xin lỗi, nhưng tôi không hiểu rõ yêu cầu của bạn. Bạn có thể cho tôi biết cụ thể hơn về điều bạn cần không?"
+  - text: "Có vẻ như tôi chưa nắm được ý chính của bạn. Bạn có thể chia sẻ thêm chi tiết hoặc đưa ra ví dụ cụ thể không?"
+  - text: "Để giúp bạn tốt hơn, bạn có thể cho tôi biết rõ hơn về vấn đề bạn đang gặp phải không?"
+  - text: "Tôi muốn đảm bảo rằng mình hiểu đúng nhu cầu của bạn. Bạn có thể diễn đạt lại bằng cách khác hoặc cung cấp thêm thông tin không?"
+  - text: "Xin lỗi vì sự nhầm lẫn. Bạn có thể cho tôi biết bạn đang tìm kiếm thông tin gì một cách chi tiết hơn không?"
+
+  utter_cheer_up:
+  - text: "Đừng lo lắng! Hãy để tôi giúp bạn tìm một công việc phù hợp nhé:"
+  - text: "Mọi chuyện rồi sẽ ổn thôi! Tôi có thể giúp bạn tìm kiếm cơ hội việc làm mới."
+  - text: "Hãy giữ tinh thần lạc quan nhé! Cùng tìm kiếm một công việc tốt hơn nào!"
+  - text: "Đừng buồn! Hãy để tôi giúp bạn tìm một khởi đầu mới với công việc phù hợp hơn."
+
+  utter_job_search_how:
+  - text: "To search for jobs on our platform, you can use the search bar at the top of the homepage. Enter keywords, job titles, or company names and filter results by location, experience level, and industry."
+  - text: "Để tìm kiếm việc làm trên nền tảng của chúng tôi, bạn có thể sử dụng thanh tìm kiếm ở đầu trang chủ. Nhập từ khóa, chức danh công việc hoặc tên công ty và lọc kết quả theo địa điểm, mức kinh nghiệm và ngành nghề."
+
+  utter_cv_creation:
+  - text: "B1: Tìm trên thanh header của trang web có từ khóa 'Tạo CV' và nhấn vào đó\nB2: Sau đó bạn sẽ được chuyển hướng đến trang tạo CV\nB3: Nhấp vào biểu tượng tạo CV, đặt tên cho CV và nhấn 'Tạo CV'\nB4:Chỉ cần nhập thông tin theo hướng dẫn trong các form nhập là thành công rồi, chúc các bạn may mắn"
+  - text: "B1: Nhấn vào mục 'Tạo CV' trên header\nB2: Nhấn vào icon tạo CV và đặt tên cho nó\nB3: Nhập các nội dung vào các ô là thành công rồi, chúc các bạn may mắn"
+  
+  utter_apply_job:
+  - text: "B1: Tìm kiếm công việc muốn nộp đơn\nB2: Tìm nút 'Nộp đơn'\nB3: Nhập các thông tin cá nhân và chọn CV cần nộp\nB4: Nhấn nút 'Gửi' và chờ đợi kết quả\n\n**Lưu ý: Có thể thay đổi nội dung đơn ứng tuyển"
+  - text: "B1: Truy cập 'Tìm việc'\nB2: Nhập từ khóa công việc hoặc ngành nghề mong muốn\nB3: Xem chi tiết công việc và nhấn 'Nộp đơn'\nB4: Nhập các thông tin cần thiết và nhất 'Gửi'\n\n**Lưu ý: Sử dụng bộ lọc để thu hẹp kết quả tìm kiếm chính xác hơn"
+
+  utter_cv_creation_tips:
+  - text: "Để tìm hiểu rõ hơn về cấu trúc của CV bạn có thể đặt thêm các câu hỏi: 'CV gồm những thông tin gì?', 'Một CV gồm nhũng gì?'...."
+  - text: "Bạn muốn biết thêm về cách viết CV chuyên nghiệp, hãy thử hỏi về các phần cần có trong CV, cách trình bày thông tin cá nhân hoặc cách làm nổi bật kinh nghiệm."
+  - text: "Để tạo CV ấn tượng, bạn có thể hỏi về các thành phần quan trọng của CV, cách viết mô tả bản thân hoặc cách chọn kỹ năng phù hợp với công việc."
+  - text: "Nếu cần hướng dẫn chi tiết về CV, bạn có thể đặt câu hỏi về cách sắp xếp học vấn, kinh nghiệm làm việc hoặc cách tối ưu kỹ năng để gây ấn tượng."
+  - text: "Để hiểu rõ hơn về cách xây dựng CV, hãy hỏi về cấu trúc CV, cách viết phần mô tả bản thân hoặc cách làm nổi bật thành tích và kỹ năng."
+
+  utter_application_status:
+  - text: "You can track your application status by logging into your account and going to the 'Applications' section. There you will see all your applications with their current status."
+  - text: "Bạn có thể theo dõi trạng thái ứng tuyển bằng cách đăng nhập vào tài khoản và vào mục 'Đơn ứng tuyển'. Tại đó, bạn sẽ thấy tất cả các đơn ứng tuyển của mình với trạng thái hiện tại."
+
+  utter_salary_info:
+  - text: "Salary information is typically displayed in job listings if provided by employers. You can also use our 'Salary Insights' tool to get industry averages based on job titles and locations."
+  - text: "Thông tin về lương thường được hiển thị trong các tin tuyển dụng nếu nhà tuyển dụng cung cấp. Bạn cũng có thể sử dụng công cụ 'Thông tin lương' để biết mức lương trung bình dựa trên vị trí công việc và địa điểm."
+
+
+  utter_employer_contact:
+  - text: "You can contact employers through our messaging system after applying for a job. Some employers also allow direct contact through the contact information provided in their company profile."
+  - text: "Bạn có thể liên hệ với nhà tuyển dụng thông qua hệ thống nhắn tin của chúng tôi sau khi ứng tuyển công việc. Một số nhà tuyển dụng cũng cho phép liên hệ trực tiếp thông qua thông tin liên hệ được cung cấp trong hồ sơ công ty."
+
+  utter_search_jobs:
+    - text: "Dưới đây là danh sách công việc phù hợp với yêu cầu của bạn"
+    - text: "Cảm ơn bạn đã chờ, đây là các công việc của bạn"
+    - text: "Đây là các công việc phù hợp với yêu cầu của bạn"
+  
+  utter_no_results:
+    - text: "Không tìm thấy việc làm phù hợp với yêu cầu của bạn."
+    - text: "Xin lỗi, hiện tại không có việc làm nào phù hợp với tiêu chí tìm kiếm của bạn."
+
+  utter_ask_continue:
+  - text: "Bạn có muốn tiếp tục tìm kiếm không?"
+
+  utter_slots_cleared:
+  - text: "Đã xóa tất cả tiêu chí tìm kiếm."
+
+  utter_default:
+  - text: "Tôi không chắc phải trả lời câu hỏi này như thế nào. Tôi có thể giúp bạn với các vấn đề về:\n- Tìm kiếm việc làm\n- Tạo hồ sơ ứng viên\n- Theo dõi trạng thái ứng tuyển\n- Thông tin về mức lương\n- Thiết lập thông báo việc làm\n- Liên hệ với nhà tuyển dụng"
+  - text: "Tôi chưa được đào tạo để trả lời câu hỏi này. Tuy nhiên, tôi có thể giúp bạn với những vấn đề liên quan đến tìm kiếm việc làm và ứng tuyển. Bạn cần hỗ trợ gì về các vấn đề này không?"
+  - text: "Câu hỏi của bạn nằm ngoài phạm vi kiến thức của tôi. Hãy cho tôi biết nếu bạn cần thông tin về tìm việc, ứng tuyển hoặc các dịch vụ tuyển dụng khác."
+
+  utter_out_of_scope:
+  - text: "Xin lỗi, tôi không hiểu được câu nói của bạn. Tôi chỉ có thể trò chuyện về các vấn đề liên quan đến tìm việc làm."
+  - text: "Tôi không được lập trình để hiểu những câu nói như vậy. Hãy hỏi tôi về việc làm, ứng tuyển hoặc các thông tin tuyển dụng nhé!"
+  - text: "Hmm, câu nói của bạn hơi khó hiểu với tôi. Tôi chỉ giỏi về tư vấn việc làm thôi. Bạn cần tìm việc gì không?"
+  - text: "Tôi là bot tìm việc, nên không thể hiểu được câu nói này. Hãy hỏi tôi về cơ hội việc làm nhé!"
+
+  utter_noop:
+  - text: "Xin lỗi, tôi không hiểu bạn đang nói gì. Bạn có thể nói rõ hơn hoặc dùng từ ngữ dễ hiểu hơn được không?"
+  - text: "Tôi không hiểu được câu nói này. Bạn có thể diễn đạt lại một cách rõ ràng hơn không?"
+  - text: "Câu nói của bạn hơi khó hiểu. Bạn có thể nói cách khác được không?"
+  - text: "Tôi không chắc bạn đang muốn nói gì. Hãy thử dùng những từ ngữ đơn giản và rõ ràng hơn nhé!"
+
+  utter_mood_great:
+  - text: "Thật tuyệt! Tôi có thể giúp gì cho bạn không?"
+  - text: "Rất vui khi nghe điều đó! Bạn cần tìm việc làm gì không?"
+  - text: "Tuyệt vời! Hãy để tôi giúp bạn tìm một công việc tốt nhé!"
+  - text: "Thật tốt! Bạn đã sẵn sàng để tìm kiếm cơ hội nghề nghiệp mới chưa?"
+
+  utter_affirm:
+  - text: "Tuyệt! Bạn muốn bắt đầu từ đâu?"
+  - text: "Rất tốt! Tôi có thể giúp gì cho bạn?"
+  - text: "Được rồi! Hãy cho tôi biết bạn muốn tìm việc gì nhé!"
+  - text: "OK! Bạn cần tìm việc làm trong lĩnh vực nào?"
+
+  utter_deny:
+  - text: "Không sao, bạn có thể quay lại khi cần tìm việc nhé!"
+  - text: "OK, không vấn đề. Hẹn gặp lại bạn khi khác!"
+  - text: "Được rồi. Nếu đổi ý, hãy quay lại với tôi nhé!"
+  - text: "Tôi hiểu. Bạn có thể tìm tôi bất cứ khi nào cần hỗ trợ tìm việc!"
+
+  utter_cv_sections:
+  - text: "Một CV chuyên nghiệp thường gồm 5 phần chính:\n1. Thông tin cá nhân\n2. Mô tả bản thân\n3. Học vấn\n4. Kinh nghiệm làm việc\n5. Kỹ năng\n\nBạn muốn tìm hiểu chi tiết về phần nào?"
+  - text: "CV của bạn nên có đầy đủ các phần sau:\n- Phần thông tin cá nhân để nhà tuyển dụng có thể liên hệ\n- Phần mô tả ngắn gọn về bản thân và mục tiêu nghề nghiệp\n- Phần học vấn thể hiện nền tảng kiến thức\n- Phần kinh nghiệm làm việc để chứng minh năng lực\n- Phần kỹ năng để thể hiện điểm mạnh của bạn\n\nBạn cần tư vấn cụ thể về phần nào?"
+  - text: "Để tạo một CV ấn tượng, hãy đảm bảo có đủ 5 phần quan trọng:\n Thông tin cá nhân\n Phần mô tả profile\n Quá trình học vấn\n Kinh nghiệm công việc\n Các kỹ năng nổi bật\n\nMỗi phần đều quan trọng, bạn muốn tìm hiểu kỹ về phần nào?"
+
+  utter_cv_personal_info:
+  - text: "Phần thông tin cá nhân cần có các thông tin cơ bản:\n- Họ và tên đầy đủ\n- Số điện thoại liên hệ\n- Email chuyên nghiệp\n- Địa chỉ hiện tại\n- Link LinkedIn (nếu có)\n- Ảnh chân dung (tùy chọn)\n\nLưu ý: Chỉ đưa những thông tin cần thiết và phù hợp với công việc."
+  - text: "Để phần thông tin cá nhân thật chuyên nghiệp:\n1️⃣ Tên đầy đủ và rõ ràng\n2️⃣ Thông tin liên hệ cập nhật\n3️⃣ Email đơn giản, dễ nhớ\n4️⃣ Địa chỉ hiện tại\n5️⃣ Các link mạng xã hội chuyên nghiệp\n\nTránh đưa thông tin nhạy cảm không cần thiết nhé!"
+  - text: "Tips cho phần thông tin cá nhân:\n Sử dụng tên thật, dễ đọc\n Email nên dùng tên thật\n Số điện thoại đang dùng\n Địa chỉ ngắn gọn\n Thêm portfolio nếu có\n\nCần lưu ý tránh thông tin riêng tư không liên quan!"
+
+  utter_cv_description:
+  - text: "Phần mô tả bản thân nên:\n- Ngắn gọn trong 2-3 câu\n- Nêu bật điểm mạnh\n- Thể hiện mục tiêu nghề nghiệp\n- Phù hợp với vị trí ứng tuyển\n- Sử dụng từ ngữ chuyên nghiệp"
+  - text: "Cách viết phần mô tả profile:\n1️⃣ Giới thiệu ngắn về bản thân\n2️⃣ Nêu kinh nghiệm nổi bật\n3️⃣ Chia sẻ mục tiêu nghề nghiệp\n4️⃣ Thể hiện niềm đam mê với công việc\n\nHãy làm nổi bật những gì độc đáo về bạn!"
+  - text: "Tips viết phần mô tả:\n- Tóm tắt bản thân trong 30-60 từ\n- Nhấn mạnh thành tích quan trọng\n- Nêu rõ định hướng phát triển\n- Thể hiện sự phù hợp với công ty\n\nĐây là cơ hội để gây ấn tượng đầu tiên!"
+
+  utter_cv_education:
+  - text: "Phần học vấn cần có:\n- Tên trường đại học/cao đẳng\n- Chuyên ngành học\n- Thời gian học tập\n- Bằng cấp đạt được\n- GPA của bạn\n- Các khóa học bổ sung\n- Thành tích học tập nổi bật"
+  - text: "Cách trình bày phần học vấn:\n- Sắp xếp theo thời gian mới nhất\n- Nêu rõ bằng cấp cao nhất\n- Liệt kê các chứng chỉ quan trọng\n- Thêm các dự án nghiên cứu\n- Ghi rõ thành tích học tập\n\nTập trung vào những gì liên quan đến công việc!"
+  - text: "Tips cho phần học vấn:\n- Ưu tiên các bằng cấp chính\n- Thêm các khóa học online\n- Nêu các kỹ năng đã học\n- Đề cập hoạt động ngoại khóa\n- Highlight các giải thưởng\n\nChọn lọc những thông tin phù hợp nhất!"
+
+  utter_cv_experience:
+  - text: "Phần kinh nghiệm làm việc cần:\n- Tên công ty hoặc tên công nghệ (nếu là projects)\n- Thời gian thực hiện\n- Vị trí công việc hoặc vai trò (nếu là projects)\n- Mô tả thành tích hoặc chức năng (nếu là projects)\n\nSử dụng động từ mạnh và số liệu cụ thể!"
+  - text: "Cách viết kinh nghiệm làm việc:\n Sắp xếp theo thứ tự mới nhất\n Mô tả công việc hoặc project ngắn gọn\n Nêu rõ thời gian làm\n Nêu bật những đóng góp\n\nTập trung vào thành tích hơn là nhiệm vụ!"
+  - text: "Tips viết phần kinh nghiệm:\n- Dùng từ khóa từ JD\n- Nêu rõ thời gian làm việc hoặc thời gian làm projects\n- Nêu rõ vai trò của bản thân\n Đề cập công nghệ sử dụng\n\nMỗi bullet point phải có giá trị!"
+
+  utter_cv_skills:
+  - text: "Phần kỹ năng nên có:\n- Tên của kỹ năng\n- Mức độ thuần thục kĩ năng đó\n\nTập trung vào kỹ năng phù hợp với công việc!"
+  - text: "Cách trình bày kỹ năng:\n- Viết tên kỹ năng hoặc công nghệ một cách rõ ràng\n- Sắp xếp theo độ quan trọng\n- Đánh giá mức độ thành thạo\n\nNên viết một cách chân thật vì nhà tuyển dụng thường xoáy vào nó"
+  - text: "Tips phần kỹ năng:\n- Dùng từ khóa ngành nghề\n- Cân bằng hard & soft skills\n- Thêm kỹ năng độc đáo\n Nêu rõ level thành thạo\n Cập nhật kỹ năng mới\n\nKỹ năng là chìa khóa gây ấn tượng!"
+
+actions:
+  - action_search_jobs
+  - action_reset_slots
+  - action_clear_slots
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false

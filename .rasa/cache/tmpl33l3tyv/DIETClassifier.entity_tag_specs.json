@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-industry",
+      "2": "I-industry",
+      "3": "L-industry",
+      "4": "U-industry",
+      "5": "B-location",
+      "6": "I-location",
+      "7": "L-location",
+      "8": "U-location",
+      "9": "B-salary",
+      "10": "I-salary",
+      "11": "L-salary",
+      "12": "U-salary",
+      "13": "B-specialization",
+      "14": "I-specialization",
+      "15": "L-specialization",
+      "16": "U-specialization",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-industry": 1,
+      "I-industry": 2,
+      "L-industry": 3,
+      "U-industry": 4,
+      "B-location": 5,
+      "I-location": 6,
+      "L-location": 7,
+      "U-location": 8,
+      "B-salary": 9,
+      "I-salary": 10,
+      "L-salary": 11,
+      "U-salary": 12,
+      "B-specialization": 13,
+      "I-specialization": 14,
+      "L-specialization": 15,
+      "U-specialization": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

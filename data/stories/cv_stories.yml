@@ -1,0 +1,83 @@
+version: "3.1"
+
+stories:
+
+- story: ask about cv sections
+  steps:
+  - intent: ask_cv_sections
+  - action: utter_cv_sections
+
+- story: ask about personal information
+  steps:
+  - intent: ask_cv_personal_info
+  - action: utter_cv_personal_info
+
+- story: ask about description section
+  steps:
+  - intent: ask_cv_description
+  - action: utter_cv_description
+
+- story: ask about education section
+  steps:
+  - intent: ask_cv_education
+  - action: utter_cv_education
+
+- story: ask about experience section
+  steps:
+  - intent: ask_cv_experience
+  - action: utter_cv_experience
+
+- story: ask about skills section
+  steps:
+  - intent: ask_cv_skills
+  - action: utter_cv_skills
+
+- story: complete cv guidance flow
+  steps:
+  - intent: ask_cv_sections
+  - action: utter_cv_sections
+  - intent: ask_cv_personal_info
+  - action: utter_cv_personal_info
+  - intent: ask_cv_description
+  - action: utter_cv_description
+  - intent: ask_cv_education
+  - action: utter_cv_education
+  - intent: ask_cv_experience
+  - action: utter_cv_experience
+  - intent: ask_cv_skills
+  - action: utter_cv_skills
+
+- story: ask about sections then personal info
+  steps:
+  - intent: ask_cv_sections
+  - action: utter_cv_sections
+  - intent: ask_cv_personal_info
+  - action: utter_cv_personal_info
+
+- story: ask about sections then description
+  steps:
+  - intent: ask_cv_sections
+  - action: utter_cv_sections
+  - intent: ask_cv_description
+  - action: utter_cv_description
+
+- story: ask about sections then education
+  steps:
+  - intent: ask_cv_sections
+  - action: utter_cv_sections
+  - intent: ask_cv_education
+  - action: utter_cv_education
+
+- story: ask about sections then experience
+  steps:
+  - intent: ask_cv_sections
+  - action: utter_cv_sections
+  - intent: ask_cv_experience
+  - action: utter_cv_experience
+
+- story: ask about sections then skills
+  steps:
+  - intent: ask_cv_sections
+  - action: utter_cv_sections
+  - intent: ask_cv_skills
+  - action: utter_cv_skills 

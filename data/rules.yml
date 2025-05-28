@@ -1,0 +1,54 @@
+version: "3.1"
+
+rules:
+- rule: Chào hỏi
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  
+- rule: Tìm kiếm việc làm theo lĩnh vực
+  steps:
+  - intent: search_jobs_by_field
+  - action: utter_search_jobs  # Thông báo đang tìm kiếm
+  - action: action_search_jobs  # Thực thi tìm kiếm
+  - action: action_listen
+
+- rule: Trả lời về các phần CV khi được hỏi
+  steps:
+  - intent: ask_cv_sections
+  - action: utter_cv_sections
+
+- rule: Trả lời về thông tin cá nhân
+  steps:
+  - intent: ask_cv_personal_info
+  - action: utter_cv_personal_info
+
+- rule: Trả lời về mô tả bản thân
+  steps:
+  - intent: ask_cv_description
+  - action: utter_cv_description
+
+- rule: Trả lời về học vấn
+  steps:
+  - intent: ask_cv_education
+  - action: utter_cv_education
+
+- rule: Trả lời về kinh nghiệm
+  steps:
+  - intent: ask_cv_experience
+  - action: utter_cv_experience
+
+- rule: Trả lời về kỹ năng
+  steps:
+  - intent: ask_cv_skills
+  - action: utter_cv_skills

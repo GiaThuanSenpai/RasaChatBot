@@ -1,0 +1,14 @@
+[
+  {
+    "name": "city_prefix",
+    "pattern": "(TP|Thành phố|tp|thành phố|Tp)\\s*\\.?\\s*"
+  },
+  {
+    "name": "city_prefix",
+    "pattern": "(Tỉnh|tinh|TỈNH)\\s*\\.?\\s*"
+  },
+  {
+    "name": "city_suffix",
+    "pattern": "\\s+(City|city|CITY)"
+  }
+]

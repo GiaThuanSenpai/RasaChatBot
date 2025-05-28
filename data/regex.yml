@@ -1,0 +1,11 @@
+version: "3.1"
+
+nlu:
+- regex: city_prefix
+  examples: |
+    - (TP|Thành phố|tp|thành phố|Tp)\s*\.?\s*
+    - (Tỉnh|tinh|TỈNH)\s*\.?\s*
+
+- regex: city_suffix
+  examples: |
+    - \s+(City|city|CITY) 

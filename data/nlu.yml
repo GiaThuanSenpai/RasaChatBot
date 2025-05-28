@@ -1,0 +1,633 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - xin chào
+    - chào bạn
+    - chào buổi sáng
+    - chào buổi tối
+    - chào
+    - chào bạn nhé
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: job_search_how
+  examples: |
+    - Làm thế nào để tìm việc trên website này?
+    - Hướng dẫn tôi cách tìm việc
+    - Tôi muốn biết cách tìm việc làm
+    - Làm sao để tìm kiếm việc làm?
+    - Hướng dẫn tìm kiếm việc làm trên trang web
+
+
+- intent: application_status
+  examples: |
+    - how can I check my application status
+    - where to see my job application
+    - how to track my application
+    - application tracking
+    - can I see the status of my job application
+    - kiểm tra trạng thái ứng tuyển
+    - làm sao để xem đơn ứng tuyển của tôi
+    - theo dõi trạng thái ứng tuyển
+
+- intent: salary_info
+  examples: |
+    - how can I find salary information
+    - where to see salary details
+    - do jobs list salary ranges
+    - are salaries posted on job listings
+    - how to know about compensation
+    - tìm thông tin lương ở đâu
+    - công việc có hiển thị mức lương không
+    - cách biết thông tin về lương
+
+
+- intent: employer_contact
+  examples: |
+    - how to contact employers
+    - can I message recruiters
+    - how to reach out to companies
+    - direct communication with employers
+    - cách liên hệ với nhà tuyển dụng
+    - tôi có thể nhắn tin cho nhà tuyển dụng không
+    - liên lạc trực tiếp với công ty
+
+- intent: search_jobs_by_field
+  examples: |
+    - tìm việc [thương mại điện tử](industry)
+    - tìm công việc ngành [marketing](industry)
+    - tìm việc làm [it phần cứng](industry)
+    - tuyển dụng [công nghệ ô tô](industry)
+    - việc làm [it phần mềm](industry)
+    - tìm việc [nhà hàng khách sạn](industry)
+    - tuyển dụng [thiết kế in ấn](industry)
+    - việc làm [cơ khí điện tử](industry)
+    - tìm việc [kinh doanh](industry)
+    - tuyển dụng [giáo dục](industry)
+    - việc làm [kiến trúc xây dựng](industry)
+    - tìm việc [tài chính ngân hàng](industry)
+    - tuyển dụng [viễn thông](industry)
+    - việc làm [y tế](industry)
+    - tìm việc [logistics](industry)
+    - tuyển dụng [kế toán kiểm toán](industry)
+    - việc làm [sản xuất](industry)
+    - tìm việc [tài xế](industry)
+    - tuyển dụng [luật](industry)
+    - việc làm [phiên dịch](industry)
+    - tìm việc [hệ thống nhúng](industry)
+    - tìm việc [iot](industry)
+    - tìm việc làm [tmdt](industry)
+    - tuyển dụng [ecommerce](industry)
+    - việc làm [digital marketing](industry)
+    - tìm việc [truyền thông](industry)
+    - tuyển dụng [pr](industry)
+    - việc làm [cntt](industry)
+    - tìm việc [công nghệ thông tin](industry)
+    - tuyển dụng [it](industry)
+    - việc làm [lập trình](industry)
+    - tìm việc [dev](industry)
+    - tuyển dụng [developer](industry)
+    - việc làm [f&b](industry)
+    - tìm việc [nhà hàng](industry)
+    - tuyển dụng [khách sạn](industry)
+    - việc làm [thiết kế](industry)
+    - tìm việc [design](industry)
+    - tuyển dụng [ui/ux](industry)
+    - việc làm [cơ khí](industry)
+    - tìm việc [điện tử](industry)
+    - tuyển dụng [sales](industry)
+    - việc làm [bán hàng](industry)
+    - tìm việc [giảng dạy](industry)
+    - tuyển dụng [đào tạo](industry)
+    - việc làm [xây dựng](industry)
+    - tìm việc [kiến trúc](industry)
+    - tuyển dụng [ngân hàng](industry)
+    - việc làm [tài chính](industry)
+    - tìm việc [y tá](industry)
+    - tuyển dụng [bác sĩ](industry)
+    - việc làm [chuỗi cung ứng](industry)
+    - tìm việc [kế toán](industry)
+    - tuyển dụng [kiểm toán](industry)
+    - việc làm [nhà máy](industry)
+    - tìm việc [lái xe](industry)
+    - tuyển dụng [luật](industry)
+    - việc làm [thông dịch](industry)
+    - tìm việc [biên dịch](industry)
+    - tuyển dụng [embedded](industry)
+    - việc làm [vi điều khiển](industry)
+    - tìm việc ở [hồ chí minh](location)
+    - tuyển dụng tại [hà nội](location)
+    - việc làm ở [đà nẵng](location)
+    - tìm việc [tptphcm](location)
+    - tuyển dụng [hn](location)
+    - việc làm [đn](location)
+    - tìm việc [sài gòn](location)
+    - tuyển dụng [hanoi](location)
+    - việc làm [danang](location)
+    - tìm việc [tphcm](location)
+    - tuyển dụng [sg](location)
+    - việc làm [ha noi](location)
+    - tìm việc [da nang](location)
+    - tìm việc [it](industry) ở [tphcm](location)
+    - tuyển dụng [marketing](industry) tại [hà nội](location)
+    - việc làm [sales](industry) [đà nẵng](location)
+    - tìm việc [cntt](industry) [tptphcm](location)
+    - tuyển dụng [kế toán](industry) [hn](location)
+    - việc làm [thiết kế](industry) [đn](location)
+    - tìm việc [lập trình](industry) [sài gòn](location)
+    - tuyển dụng [kinh doanh](industry) [hanoi](location)
+    - việc làm [y tế](industry) [danang](location)
+    - tìm việc [giáo dục](industry) [tphcm](location)
+    - tuyển dụng [luật](industry) [sg](location)
+    - việc làm [logistics](industry) [ha noi](location)
+    - tìm việc [phiên dịch](industry) [da nang](location)
+    - tìm việc [it](industry) lương [15 triệu](salary)
+    - tuyển dụng [marketing](industry) lương [20tr](salary)
+    - việc làm [sales](industry) lương từ [10-15 triệu](salary)
+    - tìm việc [cntt](industry) lương [>20tr](salary)
+    - tuyển dụng [kế toán](industry) lương [12-18tr](salary)
+    - việc làm [thiết kế](industry) lương [8-12 triệu](salary)
+    - tìm việc [lập trình](industry) lương [25 triệu](salary)
+    - tuyển dụng [kinh doanh](industry) lương [15-20tr](salary)
+    - việc làm [y tế](industry) lương [30tr](salary)
+    - tìm việc [giáo dục](industry) lương [10tr](salary)
+    - tuyển dụng [luật](industry) lương [40 triệu](salary)
+    - việc làm [logistics](industry) lương [18-25tr](salary)
+    - tìm việc [phiên dịch](industry) lương [15000000](salary)
+    - tìm việc [it](industry) ở [tphcm](location) lương [20tr](salary)
+    - tuyển dụng [marketing](industry) tại [hà nội](location) lương [15-18tr](salary)
+    - việc làm [sales](industry) [đà nẵng](location) lương [12 triệu](salary)
+    - tìm việc [cntt](industry) [tptphcm](location) lương [25-30tr](salary)
+    - tuyển dụng [kế toán](industry) [hn](location) lương [10-15 triệu](salary)
+    - việc làm [thiết kế](industry) [đn](location) lương [15000000](salary)
+    - tìm việc [lập trình](industry) [sài gòn](location) lương [35tr](salary)
+    - tuyển dụng [kinh doanh](industry) [hanoi](location) lương [20000000](salary)
+    - việc làm [y tế](industry) [danang](location) lương [15-20 triệu](salary)
+    - tìm việc [giáo dục](industry) [tphcm](location) lương [12tr](salary)
+    - tuyển dụng [luật](industry) [sg](location) lương [40-50tr](salary)
+    - việc làm [logistics](industry) [ha noi](location) lương [20-25 triệu](salary)
+    - tìm việc [phiên dịch](industry) [da nang](location) lương [15tr](salary)
+    - tìm việc ngành [it](industry)
+    - tìm việc lĩnh vực [marketing](industry)
+    - tìm việc mảng [sales](industry)
+    - công việc [cntt](industry)
+    - việc ngành [kế toán](industry)
+    - tìm việc về [thiết kế](industry)
+    - tìm việc liên quan [lập trình](industry)
+    - tìm việc thuộc ngành [kinh doanh](industry)
+    - tìm việc trong lĩnh vực [y tế](industry)
+    - tìm việc ở mảng [giáo dục](industry)
+    - tìm việc về ngành [luật](industry)
+    - tìm việc thuộc lĩnh vực [logistics](industry)
+    - tìm việc liên quan đến [phiên dịch](industry)
+    - tìm việc [it](industry) tại [tphcm](location)
+    - tìm việc [marketing](industry) ở [hà nội](location)
+    - tìm việc [sales](industry) tại [đà nẵng](location)
+    - tìm việc [cntt](industry) ở [tptphcm](location)
+    - tìm việc [kế toán](industry) tại [hn](location)
+    - tìm việc [thiết kế](industry) ở [đn](location)
+    - tìm việc [lập trình](industry) tại [sài gòn](location)
+    - tìm việc [kinh doanh](industry) ở [hanoi](location)
+    - tìm việc [y tế](industry) tại [danang](location)
+    - tìm việc [giáo dục](industry) ở [tphcm](location)
+    - tìm việc [luật](industry) tại [sg](location)
+    - tìm việc [logistics](industry) ở [ha noi](location)
+    - tìm việc [phiên dịch](industry) tại [da nang](location)
+    - tìm việc [it](industry) lương khoảng [15 triệu](salary)
+    - tìm việc [marketing](industry) mức lương [20tr](salary)
+    - tìm việc [sales](industry) lương tầm [10-15 triệu](salary)
+    - tìm việc [cntt](industry) mức [>20tr](salary)
+    - tìm việc [kế toán](industry) khoảng [12-18tr](salary)
+    - tìm việc [thiết kế](industry) lương tầm [8-12 triệu](salary)
+    - tìm việc [lập trình](industry) khoảng [25 triệu](salary)
+    - tìm việc [kinh doanh](industry) mức [15-20tr](salary)
+    - tìm việc [y tế](industry) lương tầm [30tr](salary)
+    - tìm việc [giáo dục](industry) khoảng [10tr](salary)
+    - tìm việc [luật](industry) mức [40 triệu](salary)
+    - tìm việc [logistics](industry) lương tầm [18-25tr](salary)
+    - tìm việc [phiên dịch](industry) khoảng [15000000](salary)
+    - tìm việc [it](industry) [lập trình viên frontend](specialization)
+    - tìm việc [it](industry) [backend developer](specialization)
+    - tìm việc [it](industry) [fullstack](specialization)
+    - tìm việc [it](industry) [devops engineer](specialization)
+    - tìm việc [marketing](industry) [content marketing](specialization)
+    - tìm việc [marketing](industry) [digital marketing](specialization)
+    - tìm việc [marketing](industry) [social media](specialization)
+    - tìm việc [marketing](industry) [seo](specialization)
+    - tìm việc [thiết kế](industry) [ui ux designer](specialization)
+    - tìm việc [thiết kế](industry) [graphic designer](specialization)
+    - tìm việc [thiết kế](industry) [motion designer](specialization)
+    - tìm việc [thiết kế](industry) [3d artist](specialization)
+    - tìm việc [kế toán](industry) [kế toán trưởng](specialization)
+    - tìm việc [kế toán](industry) [kế toán tổng hợp](specialization)
+    - tìm việc [kế toán](industry) [kế toán thuế](specialization)
+    - tìm việc [kinh doanh](industry) [sales manager](specialization)
+    - tìm việc [kinh doanh](industry) [business development](specialization)
+    - tìm việc [kinh doanh](industry) [telesales](specialization)
+    - tìm việc [y tế](industry) [bác sĩ đa khoa](specialization)
+    - tìm việc [y tế](industry) [điều dưỡng](specialization)
+    - tìm việc [y tế](industry) [dược sĩ](specialization)
+    - tìm việc [giáo dục](industry) [giáo viên tiếng anh](specialization)
+    - tìm việc [giáo dục](industry) [giáo viên mầm non](specialization)
+    - tìm việc [giáo dục](industry) [giảng viên đại học](specialization)
+    - tìm việc [luật](industry) [luật sư tư vấn](specialization)
+    - tìm việc [luật](industry) [chuyên viên pháp lý](specialization)
+    - tìm việc [logistics](industry) [quản lý kho](specialization)
+    - tìm việc [logistics](industry) [xuất nhập khẩu](specialization)
+    - tìm việc [logistics](industry) [chuỗi cung ứng](specialization)
+    - tìm việc [it](industry) [lập trình viên frontend](specialization) tại [tphcm](location)
+    - tìm việc [marketing](industry) [content marketing](specialization) ở [hà nội](location)
+    - tìm việc [thiết kế](industry) [ui ux designer](specialization) tại [đà nẵng](location)
+    - tìm việc [kế toán](industry) [kế toán trưởng](specialization) ở [tptphcm](location)
+    - tìm việc [kinh doanh](industry) [sales manager](specialization) tại [hn](location)
+    - tìm việc [y tế](industry) [bác sĩ đa khoa](specialization) ở [đn](location)
+    - tìm việc [it](industry) [lập trình viên frontend](specialization) lương [20tr](salary)
+    - tìm việc [marketing](industry) [content marketing](specialization) lương [15-18tr](salary)
+    - tìm việc [thiết kế](industry) [ui ux designer](specialization) lương [25 triệu](salary)
+    - tìm việc [kế toán](industry) [kế toán trưởng](specialization) lương [30tr](salary)
+    - tìm việc [kinh doanh](industry) [sales manager](specialization) lương [20-25tr](salary)
+    - tìm việc [y tế](industry) [bác sĩ đa khoa](specialization) lương [40tr](salary)
+    - tìm việc [it](industry) [lập trình viên frontend](specialization) tại [tphcm](location) lương [25tr](salary)
+    - tìm việc [marketing](industry) [content marketing](specialization) ở [hà nội](location) lương [18tr](salary)
+    - tìm việc [thiết kế](industry) [ui ux designer](specialization) tại [đà nẵng](location) lương [20tr](salary)
+    - tìm việc [kế toán](industry) [kế toán trưởng](specialization) ở [tptphcm](location) lương [35tr](salary)
+    - tìm việc [kinh doanh](industry) [sales manager](specialization) tại [hn](location) lương [30tr](salary)
+    - tìm việc [y tế](industry) [bác sĩ đa khoa](specialization) ở [đn](location) lương [45tr](salary)
+    - tìm việc [y tế](industry) [bác sĩ đa khoa](specialization) ở [đn](location) lương [45tr](salary)
+    
+    # Thương mại điện tử
+    - tìm việc [thương mại điện tử](industry) [quản lý sàn tmdt](specialization)
+    - tìm việc [thương mại điện tử](industry) [chuyên viên marketplace](specialization) tại [tphcm](location)
+    - tìm việc [thương mại điện tử](industry) [quản lý sàn tmdt](specialization) lương [25tr](salary)
+    - tìm việc [thương mại điện tử](industry) [chuyên viên marketplace](specialization) tại [hà nội](location) lương [20-25tr](salary)
+    - tìm việc [ecommerce](industry) [quản lý vận hành](specialization) ở [đà nẵng](location) lương [18tr](salary)
+
+    # Marketing/Truyền thông
+    - tìm việc [marketing](industry) [brand manager](specialization)
+    - tìm việc [marketing](industry) [social media manager](specialization) tại [tphcm](location)
+    - tìm việc [marketing](industry) [performance marketing](specialization) lương [20tr](salary)
+    - tìm việc [truyền thông](industry) [pr manager](specialization) tại [hà nội](location) lương [25-30tr](salary)
+    - tìm việc [marketing](industry) [digital marketing](specialization) ở [đà nẵng](location) lương [15-18tr](salary)
+
+    # IT Phần cứng
+    - tìm việc [it phần cứng](industry) [kỹ sư phần cứng](specialization)
+    - tìm việc [it phần cứng](industry) [quản lý hạ tầng](specialization) tại [tphcm](location)
+    - tìm việc [it phần cứng](industry) [kỹ sư mạng](specialization) lương [25tr](salary)
+    - tìm việc [it phần cứng](industry) [system engineer](specialization) tại [hà nội](location) lương [30-35tr](salary)
+    - tìm việc [it phần cứng](industry) [kỹ sư bảo trì](specialization) ở [đà nẵng](location) lương [20tr](salary)
+
+    # Công nghệ ô tô
+    - tìm việc [công nghệ ô tô](industry) [kỹ sư ô tô](specialization)
+    - tìm việc [công nghệ ô tô](industry) [chuyên viên bảo dưỡng](specialization) tại [tphcm](location)
+    - tìm việc [công nghệ ô tô](industry) [kỹ sư thiết kế](specialization) lương [30tr](salary)
+    - tìm việc [công nghệ ô tô](industry) [quản lý kỹ thuật](specialization) tại [hà nội](location) lương [35-40tr](salary)
+    - tìm việc [công nghệ ô tô](industry) [kỹ sư cơ khí ô tô](specialization) ở [đà nẵng](location) lương [25tr](salary)
+
+    # Nhà hàng/Khách sạn
+    - tìm việc [nhà hàng khách sạn](industry) [quản lý nhà hàng](specialization)
+    - tìm việc [nhà hàng khách sạn](industry) [bếp trưởng](specialization) tại [tphcm](location)
+    - tìm việc [f&b](industry) [giám sát f&b](specialization) lương [20tr](salary)
+    - tìm việc [nhà hàng khách sạn](industry) [quản lý khách sạn](specialization) tại [hà nội](location) lương [25-30tr](salary)
+    - tìm việc [nhà hàng khách sạn](industry) [lễ tân khách sạn](specialization) ở [đà nẵng](location) lương [12tr](salary)
+
+    # Thiết kế/In ấn
+    - tìm việc [thiết kế in ấn](industry) [art director](specialization)
+    - tìm việc [thiết kế in ấn](industry) [thiết kế quảng cáo](specialization) tại [tphcm](location)
+    - tìm việc [thiết kế in ấn](industry) [chuyên viên in ấn](specialization) lương [18tr](salary)
+    - tìm việc [thiết kế in ấn](industry) [thiết kế bao bì](specialization) tại [hà nội](location) lương [20-25tr](salary)
+    - tìm việc [thiết kế in ấn](industry) [thiết kế đồ họa](specialization) ở [đà nẵng](location) lương [15tr](salary)
+
+    # Cơ khí/Điện - điện tử
+    - tìm việc [cơ khí điện tử](industry) [kỹ sư cơ điện tử](specialization)
+    - tìm việc [cơ khí điện tử](industry) [kỹ sư tự động hóa](specialization) tại [tphcm](location)
+    - tìm việc [cơ khí điện tử](industry) [kỹ sư điện](specialization) lương [25tr](salary)
+    - tìm việc [cơ khí điện tử](industry) [kỹ sư cơ khí](specialization) tại [hà nội](location) lương [30-35tr](salary)
+    - tìm việc [cơ khí điện tử](industry) [kỹ thuật viên điện tử](specialization) ở [đà nẵng](location) lương [18tr](salary)
+
+    # Kiến trúc/Xây dựng
+    - tìm việc [kiến trúc xây dựng](industry) [kiến trúc sư](specialization)
+    - tìm việc [kiến trúc xây dựng](industry) [kỹ sư xây dựng](specialization) tại [tphcm](location)
+    - tìm việc [kiến trúc xây dựng](industry) [giám sát công trình](specialization) lương [30tr](salary)
+    - tìm việc [kiến trúc xây dựng](industry) [quản lý dự án](specialization) tại [hà nội](location) lương [35-40tr](salary)
+    - tìm việc [kiến trúc xây dựng](industry) [thiết kế nội thất](specialization) ở [đà nẵng](location) lương [20tr](salary)
+
+    # Tài chính/Ngân hàng
+    - tìm việc [tài chính](industry) [chuyên viên tín dụng](specialization)
+    - tìm việc [tài chính ngân hàng](industry) [chuyên viên đầu tư](specialization) tại [tphcm](location)
+    - tìm việc [tài chính](industry) [chuyên viên phân tích tài chính](specialization) lương [25tr](salary)
+    - tìm việc [tài chính ngân hàng](industry) [quản lý danh mục đầu tư](specialization) tại [hà nội](location) lương [30-35tr](salary)
+    - tìm việc [tài chính ngân hàng](industry) [chuyên viên ngân hàng](specialization) ở [đà nẵng](location) lương [18tr](salary)
+
+    # Viễn thông
+    - tìm việc [viễn thông](industry) [kỹ sư viễn thông](specialization)
+    - tìm việc [viễn thông](industry) [kỹ sư mạng](specialization) tại [tphcm](location)
+    - tìm việc [viễn thông](industry) [kỹ sư vô tuyến](specialization) lương [28tr](salary)
+    - tìm việc [viễn thông](industry) [quản lý dự án viễn thông](specialization) tại [hà nội](location) lương [35-40tr](salary)
+    - tìm việc [viễn thông](industry) [kỹ thuật viên viễn thông](specialization) ở [đà nẵng](location) lương [20tr](salary)
+
+    # Hệ thống nhúng và IOT
+    - tìm việc [hệ thống nhúng](industry) [kỹ sư nhúng](specialization)
+    - tìm việc [iot](industry) [kỹ sư iot](specialization) tại [tphcm](location)
+    - tìm việc [hệ thống nhúng](industry) [lập trình nhúng](specialization) lương [30tr](salary)
+    - tìm việc [iot](industry) [kỹ sư phát triển iot](specialization) tại [hà nội](location) lương [35-40tr](salary)
+    - tìm việc [hệ thống nhúng](industry) [kỹ sư firmware](specialization) ở [đà nẵng](location) lương [25tr](salary)
+
+    # Sản xuất
+    - tìm việc [sản xuất](industry) [quản đốc nhà máy](specialization)
+    - tìm việc [sản xuất](industry) [kỹ sư sản xuất](specialization) tại [tphcm](location)
+    - tìm việc [sản xuất](industry) [quản lý chất lượng](specialization) lương [25tr](salary)
+    - tìm việc [sản xuất](industry) [quản lý sản xuất](specialization) tại [hà nội](location) lương [30-35tr](salary)
+    - tìm việc [sản xuất](industry) [kỹ thuật viên sản xuất](specialization) ở [đà nẵng](location) lương [15tr](salary)
+
+    # IT phần mềm
+    - tìm việc [it phần mềm](industry) [frontend developer](specialization)
+    - tìm việc [it phần mềm](industry) [backend developer](specialization) tại [tphcm](location)
+    - tìm việc [it phần mềm](industry) [fullstack developer](specialization) lương [30tr](salary)
+    - tìm việc [it phần mềm](industry) [mobile developer](specialization) tại [hà nội](location) lương [35-40tr](salary)
+    - tìm việc [it phần mềm](industry) [devops engineer](specialization) ở [đà nẵng](location) lương [25tr](salary)
+
+    # Kinh doanh
+    - tìm việc [kinh doanh](industry) [business development manager](specialization)
+    - tìm việc [kinh doanh](industry) [sales executive](specialization) tại [tphcm](location)
+    - tìm việc [kinh doanh](industry) [key account manager](specialization) lương [25tr](salary)
+    - tìm việc [kinh doanh](industry) [sales director](specialization) tại [hà nội](location) lương [50-60tr](salary)
+    - tìm việc [kinh doanh](industry) [telesales](specialization) ở [đà nẵng](location) lương [15tr](salary)
+
+    # Giáo dục/Đào tạo
+    - tìm việc [giáo dục](industry) [giáo viên tiếng anh](specialization)
+    - tìm việc [giáo dục](industry) [giảng viên đại học](specialization) tại [tphcm](location)
+    - tìm việc [giáo dục](industry) [hiệu trưởng](specialization) lương [35tr](salary)
+    - tìm việc [giáo dục](industry) [đào tạo nội bộ](specialization) tại [hà nội](location) lương [20-25tr](salary)
+    - tìm việc [giáo dục](industry) [giáo viên mầm non](specialization) ở [đà nẵng](location) lương [12tr](salary)
+
+    # Y tế
+    - tìm việc [y tế](industry) [bác sĩ nội khoa](specialization)
+    - tìm việc [y tế](industry) [điều dưỡng trưởng](specialization) tại [tphcm](location)
+    - tìm việc [y tế](industry) [dược sĩ](specialization) lương [20tr](salary)
+    - tìm việc [y tế](industry) [bác sĩ chuyên khoa](specialization) tại [hà nội](location) lương [50-60tr](salary)
+    - tìm việc [y tế](industry) [kỹ thuật viên xét nghiệm](specialization) ở [đà nẵng](location) lương [15tr](salary)
+
+    # Logistics
+    - tìm việc [logistics](industry) [giám đốc logistics](specialization)
+    - tìm việc [logistics](industry) [chuyên viên xuất nhập khẩu](specialization) tại [tphcm](location)
+    - tìm việc [logistics](industry) [quản lý kho](specialization) lương [20tr](salary)
+    - tìm việc [logistics](industry) [supply chain manager](specialization) tại [hà nội](location) lương [35-40tr](salary)
+    - tìm việc [logistics](industry) [điều phối vận tải](specialization) ở [đà nẵng](location) lương [15tr](salary)
+
+    # Kế toán/Kiểm toán
+    - tìm việc [kế toán kiểm toán](industry) [kế toán trưởng](specialization)
+    - tìm việc [kế toán kiểm toán](industry) [kiểm toán viên](specialization) tại [tphcm](location)
+    - tìm việc [kế toán kiểm toán](industry) [kế toán tổng hợp](specialization) lương [25tr](salary)
+    - tìm việc [kế toán kiểm toán](industry) [kế toán thuế](specialization) tại [hà nội](location) lương [20-25tr](salary)
+    - tìm việc [kế toán kiểm toán](industry) [kế toán nội bộ](specialization) ở [đà nẵng](location) lương [15tr](salary)
+
+    # Tài xế
+    - tìm việc [tài xế](industry) [tài xế xe container](specialization)
+    - tìm việc [tài xế](industry) [tài xế xe tải](specialization) tại [tphcm](location)
+    - tìm việc [tài xế](industry) [tài xế xe khách](specialization) lương [15tr](salary)
+    - tìm việc [tài xế](industry) [tài xế xe công ty](specialization) tại [hà nội](location) lương [12-15tr](salary)
+    - tìm việc [tài xế](industry) [tài xế giao hàng](specialization) ở [đà nẵng](location) lương [10tr](salary)
+
+    # Luật
+    - tìm việc [luật](industry) [luật sư tư vấn](specialization)
+    - tìm việc [luật](industry) [chuyên viên pháp lý](specialization) tại [tphcm](location)
+    - tìm việc [luật](industry) [trưởng phòng pháp chế](specialization) lương [35tr](salary)
+    - tìm việc [luật](industry) [luật sư tranh tụng](specialization) tại [hà nội](location) lương [40-50tr](salary)
+    - tìm việc [luật](industry) [chuyên viên tư vấn luật](specialization) ở [đà nẵng](location) lương [20tr](salary)
+
+    # Phiên dịch
+    - tìm việc [phiên dịch](industry) [phiên dịch viên tiếng anh](specialization)
+    - tìm việc [phiên dịch](industry) [biên dịch viên](specialization) tại [tphcm](location)
+    - tìm việc [phiên dịch](industry) [phiên dịch tiếng nhật](specialization) lương [25tr](salary)
+    - tìm việc [phiên dịch](industry) [phiên dịch tiếng trung](specialization) tại [hà nội](location) lương [20-25tr](salary)
+    - tìm việc [phiên dịch](industry) [biên dịch tài liệu](specialization) ở [đà nẵng](location) lương [15tr](salary)
+
+- intent: clear_slots
+  examples: |
+    - xóa tìm kiếm
+    - reset tìm kiếm
+    - bắt đầu lại
+    - xóa các tiêu chí
+    - xóa bộ lọc
+    - bỏ tìm kiếm cũ
+    - làm mới tìm kiếm
+    - xóa kết quả cũ
+    - reset
+    - clear
+    - xóa
+    - bỏ tìm kiếm
+    - tìm kiếm mới
+    - bắt đầu tìm mới
+    - xóa tất cả
+    - xóa hết
+
+- intent: apply_job
+  examples: |
+    - Làm thế nào để nộp đơn xin việc?
+    - Hướng dẫn cách nộp đơn ứng tuyển công việc
+    - Tôi muốn nộp đơn xin việc thì làm gì?
+    - Các bước để apply job là gì?
+    - Làm sao để gửi CV cho công việc?
+    - Hướng dẫn nộp hồ sơ xin việc
+    - Tôi cần làm gì để ứng tuyển công việc?
+    - Cách nộp đơn cho một vị trí tuyển dụng
+    - Hướng dẫn chi tiết cách nộp đơn việc làm
+    - Làm thế nào để gửi đơn ứng tuyển?
+
+- intent: cv_creation
+  examples: |
+    - hướng dẫn tạo CV
+    - cách viết CV
+    - làm CV như thế nào
+    - chỉ cách làm CV
+    - tạo CV ra sao
+    - viết CV thế nào
+    - mẫu CV chuẩn
+    - CV mẫu
+    - cần tạo CV
+    - muốn viết CV
+    - giúp tôi làm CV
+    - hướng dẫn viết CV chuyên nghiệp
+    - cách tạo CV ấn tượng
+    - tạo CV online
+    - viết CV xin việc
+    - CV tìm việc
+    - CV ứng tuyển
+    - mẫu CV hay
+    - format CV
+
+- intent: ask_cv_sections
+  examples: |
+    - CV gồm những phần nào?
+    - Một CV cần có những gì?
+    - CV bao gồm những mục nào?
+    - Hướng dẫn viết CV
+    - CV gồm những thông tin gì?
+    - Cấu trúc của một CV
+    - CV nên có những phần nào?
+    - Một CV hoàn chỉnh gồm gì?
+    - Các phần trong CV
+    - Nội dung chính của CV
+    - CV chuẩn cần những gì?
+    - Mẫu CV cần những phần nào?
+
+- intent: ask_cv_personal_info
+  examples: |
+    - Phần thông tin cá nhân trong CV
+    - Viết thông tin cá nhân trong CV thế nào?
+    - CV cần những thông tin cá nhân gì?
+    - Thông tin cá nhân nào cần có trong CV?
+    - Cách viết thông tin cá nhân CV
+    - Hướng dẫn viết phần thông tin cá nhân
+    - Phần profile cá nhân trong CV
+    - Thông tin liên hệ trong CV
+    - CV nên để những thông tin cá nhân gì?
+    - Cách trình bày thông tin cá nhân?
+    - Những thông tin cần thiết trong CV?
+    - Thông tin cá nhân trong CV?
+
+- intent: ask_cv_description
+  examples: |
+    - Cách viết phần mô tả bản thân
+    - Viết giới thiệu bản thân trong CV
+    - Phần summary trong CV viết sao?
+    - Mô tả profile cá nhân thế nào?
+    - Hướng dẫn viết phần mô tả CV
+    - Cách viết profile trong CV
+    - Viết giới thiệu về mình trong CV
+    - Phần tóm tắt trong CV
+    - Mô tả ngắn về bản thân
+    - Profile summary viết thế nào?
+    - Cách viết phần tổng quan
+    - Giới thiệu bản thân chuyên nghiệp
+
+- intent: ask_cv_education
+  examples: |
+    - Viết phần học vấn trong CV
+    - Cách trình bày phần học vấn
+    - Phần education trong CV
+    - Thông tin học vấn cần ghi gì?
+    - Học vấn trong CV gồm những gì?
+    - Cách viết quá trình học tập
+    - Trình bày học vấn trong CV
+    - Phần academic background
+    - Thông tin trường học trong CV
+    - Ghi học vấn thế nào cho chuẩn?
+    - Cách viết bằng cấp trong CV
+    - Trình độ học vấn ghi ra sao?
+
+- intent: ask_cv_experience
+  examples: |
+    - Cách viết kinh nghiệm làm việc
+    - Phần work experience trong CV
+    - Trình bày kinh nghiệm việc làm
+    - Viết kinh nghiệm trong CV
+    - Cách ghi kinh nghiệm làm việc
+    - Kinh nghiệm công việc viết sao?
+    - Mô tả kinh nghiệm chuyên môn
+    - Trình bày quá trình làm việc
+    - Cách viết job experience
+    - Kinh nghiệm dự án ghi thế nào?
+    - Viết về công việc đã làm
+    - Mô tả kinh nghiệm nghề nghiệp
+
+- intent: ask_cv_skills
+  examples: |
+    - Cách viết kỹ năng trong CV
+    - Phần skills trong CV
+    - Trình bày kỹ năng chuyên môn
+    - Viết về các kỹ năng
+    - Kỹ năng cần có trong CV
+    - Cách liệt kê kỹ năng
+    - Mô tả kỹ năng làm việc
+    - Kỹ năng chuyên môn ghi gì?
+    - Soft skills trong CV
+    - Hard skills cần ghi những gì?
+    - Cách viết technical skills
+    - Trình bày năng lực bản thân

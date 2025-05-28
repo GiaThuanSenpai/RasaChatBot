@@ -1,0 +1,17 @@
+{
+  "0": "affirm",
+  "1": "application_status",
+  "2": "bot_challenge",
+  "3": "clear_slots",
+  "4": "deny",
+  "5": "employer_contact",
+  "6": "goodbye",
+  "7": "greet",
+  "8": "job_alerts",
+  "9": "job_search_how",
+  "10": "mood_great",
+  "11": "mood_unhappy",
+  "12": "profile_creation",
+  "13": "salary_info",
+  "14": "search_jobs_by_field"
+}

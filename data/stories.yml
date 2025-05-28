@@ -1,0 +1,114 @@
+version: "3.1"
+
+stories:
+
+- story: hỏi về các phần trong CV
+  steps:
+  - intent: ask_cv_sections
+  - action: utter_cv_sections
+
+- story: hỏi về thông tin cá nhân
+  steps:
+  - intent: ask_cv_personal_info
+  - action: utter_cv_personal_info
+
+- story: hỏi về mô tả bản thân
+  steps:
+  - intent: ask_cv_description
+  - action: utter_cv_description
+
+- story: hỏi về học vấn
+  steps:
+  - intent: ask_cv_education
+  - action: utter_cv_education
+
+- story: hỏi về kinh nghiệm
+  steps:
+  - intent: ask_cv_experience
+  - action: utter_cv_experience
+
+- story: hỏi về kỹ năng
+  steps:
+  - intent: ask_cv_skills
+  - action: utter_cv_skills
+
+- story: hỏi chi tiết CV từ tổng quan
+  steps:
+  - intent: ask_cv_sections
+  - action: utter_cv_sections
+  - intent: ask_cv_personal_info
+  - action: utter_cv_personal_info
+  - intent: ask_cv_description
+  - action: utter_cv_description
+  - intent: ask_cv_education
+  - action: utter_cv_education
+  - intent: ask_cv_experience
+  - action: utter_cv_experience
+  - intent: ask_cv_skills
+  - action: utter_cv_skills
+
+- story: chào hỏi và hỏi về CV
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_cv_sections
+  - action: utter_cv_sections
+
+- story: kết thúc hội thoại
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: affirm
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: deny
+  - action: utter_goodbye
+
+- story: job search how
+  steps:
+  - intent: job_search_how
+  - action: action_search_jobs
+
+- story: cv creation
+  steps:
+  - intent: cv_creation
+  - action: utter_cv_creation
+  - action: utter_cv_creation_tips
+
+- story: apply_job
+  steps:
+  - intent: apply_job
+  - action: utter_apply_job
+
+- story: application status
+  steps:
+  - intent: application_status
+  - action: utter_application_status
+
+- story: salary information
+  steps:
+  - intent: salary_info
+  - action: utter_salary_info
+
+- story: employer contact
+  steps:
+  - intent: employer_contact
+  - action: utter_employer_contact

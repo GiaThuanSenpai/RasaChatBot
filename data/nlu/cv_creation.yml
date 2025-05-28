@@ -1,0 +1,183 @@
+version: "3.1"
+
+nlu:
+- intent: ask_cv_sections
+  examples: |
+    - CV gồm những phần nào?
+    - một CV cần có những gì?
+    - CV cần những thông tin gì?
+    - hướng dẫn viết CV
+    - CV bao gồm những mục nào?
+    - cấu trúc của một CV
+    - CV nên có những phần nào?
+    - các phần trong CV
+    - CV cần điền những gì?
+    - mẫu CV chuẩn có những phần nào?
+    - CV có những tab nào?
+    - các tab trong CV là gì?
+    - CV được chia thành mấy phần?
+    - CV có bao nhiêu mục chính?
+    - nội dung chính của CV?
+
+- intent: ask_cv_personal_info
+  examples: |
+    - phần thông tin cá nhân trong CV
+    - điền thông tin cá nhân vào CV như thế nào
+    - thông tin cá nhân cần có gì trong CV
+    - CV cần những thông tin cá nhân nào
+    - thông tin cá nhân trong CV gồm những gì
+    - hướng dẫn điền thông tin cá nhân
+    - phần personal information trong CV
+    - cách viết thông tin cá nhân trong CV
+    - thông tin cá nhân CV cần những gì
+    - điền thông tin cá nhân sao cho chuyên nghiệp
+    - tab thông tin cá nhân điền gì
+    - thông tin liên hệ trong CV
+    - cách điền tab thông tin cá nhân
+    - mục thông tin cá nhân ghi những gì
+
+- intent: ask_cv_description
+  examples: |
+    - phần mô tả trong CV viết gì
+    - cách viết phần mô tả bản thân
+    - mô tả profile trong CV
+    - viết mô tả về bản thân thế nào
+    - phần giới thiệu bản thân
+    - tab mô tả viết ra sao
+    - cách viết phần summary
+    - mô tả bản thân trong CV
+    - phần profile summary viết gì
+    - tự giới thiệu trong CV
+    - viết mô tả profile thế nào
+    - cách viết phần tóm tắt
+    - mục mô tả cần ghi những gì
+    - viết giới thiệu bản thân sao cho hay
+
+- intent: ask_cv_education
+  examples: |
+    - phần học vấn trong CV
+    - viết phần học vấn như thế nào
+    - cách viết phần education trong CV
+    - học vấn trong CV cần ghi những gì
+    - điền thông tin học vấn vào CV
+    - phần education gồm những gì
+    - CV phần học vấn cần những thông tin gì
+    - cách trình bày phần học vấn
+    - thông tin về học vấn trong CV
+    - viết học vấn trong CV như thế nào
+    - tab học vấn điền gì
+    - mục học vấn cần có gì
+    - trình độ học vấn trong CV
+    - ghi học vấn sao cho đúng
+
+- intent: ask_cv_experience
+  examples: |
+    - phần kinh nghiệm làm việc trong CV
+    - cách viết kinh nghiệm làm việc
+    - kinh nghiệm làm việc ghi như thế nào
+    - work experience trong CV
+    - viết experience trong CV
+    - cách trình bày kinh nghiệm làm việc
+    - kinh nghiệm làm việc cần ghi những gì
+    - phần experience cần những thông tin gì
+    - hướng dẫn viết kinh nghiệm làm việc
+    - điền thông tin kinh nghiệm vào CV
+    - tab kinh nghiệm viết gì
+    - mục kinh nghiệm làm việc
+    - ghi kinh nghiệm việc làm
+    - viết kinh nghiệm sao cho tốt
+
+- intent: ask_cv_skills
+  examples: |
+    - phần kỹ năng trong CV
+    - viết kỹ năng trong CV
+    - cách viết skills trong CV
+    - kỹ năng cần có trong CV
+    - trình bày phần kỹ năng
+    - skills section trong CV
+    - CV cần những kỹ năng gì
+    - kỹ năng ghi trong CV như thế nào
+    - phần skills viết sao cho tốt
+    - điền kỹ năng vào CV
+    - tab kỹ năng cần ghi gì
+    - mục kỹ năng trong CV
+    - liệt kê kỹ năng thế nào
+    - viết kỹ năng sao cho chuyên nghiệp
+
+- intent: ask_cv_languages
+  examples: |
+    - phần ngôn ngữ trong CV
+    - viết trình độ ngôn ngữ
+    - language skills trong CV
+    - cách viết phần ngôn ngữ
+    - trình độ ngôn ngữ trong CV
+    - ngôn ngữ ghi trong CV thế nào
+    - điền thông tin ngôn ngữ
+    - phần languages trong CV
+    - kỹ năng ngôn ngữ viết sao
+    - cách ghi trình độ ngôn ngữ
+
+- intent: ask_cv_projects
+  examples: |
+    - phần dự án trong CV
+    - cách viết projects trong CV
+    - viết về dự án đã làm
+    - project experience trong CV
+    - trình bày phần dự án
+    - dự án cần ghi những gì
+    - cách viết phần projects
+    - kinh nghiệm dự án trong CV
+    - điền thông tin dự án
+    - viết dự án trong CV
+
+- intent: ask_cv_achievements
+  examples: |
+    - phần thành tích trong CV
+    - cách viết achievements
+    - thành tích ghi trong CV
+    - viết về thành tích đạt được
+    - achievements section trong CV
+    - trình bày phần thành tích
+    - thành tích cần ghi những gì
+    - cách viết phần achievements
+    - điền thông tin thành tích
+    - ghi thành tích trong CV
+
+- intent: ask_cv_references
+  examples: |
+    - phần người tham khảo trong CV
+    - cách viết references
+    - người tham khảo ghi như thế nào
+    - references section trong CV
+    - viết phần references
+    - người tham khảo cần những thông tin gì
+    - cách điền thông tin người tham khảo
+    - phần references trong CV
+    - thông tin người tham khảo
+    - references viết sao cho đúng
+
+- intent: ask_cv_format
+  examples: |
+    - định dạng CV như thế nào
+    - format CV ra sao
+    - cách trình bày CV
+    - CV nên định dạng thế nào
+    - hướng dẫn format CV
+    - CV layout chuẩn
+    - cách format CV chuyên nghiệp
+    - định dạng CV chuẩn
+    - CV nên trình bày ra sao
+    - format CV chuyên nghiệp
+
+- intent: ask_cv_tips
+  examples: |
+    - mẹo viết CV hay
+    - tips viết CV tốt
+    - làm sao để CV nổi bật
+    - bí quyết viết CV
+    - CV tips and tricks
+    - cách làm CV ấn tượng
+    - mẹo tạo CV chuyên nghiệp
+    - hướng dẫn viết CV hay
+    - tips tạo CV đẹp
+    - bí quyết tạo CV nổi bật 

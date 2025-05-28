@@ -1,0 +1,14 @@
+
+# Môi trường ảo
+rasa_env/
+venv/
+
+# Tệp lớn
+*.pyd
+*.dll
+*.tar.gz
+
+# Tệp tạm
+__pycache__/
+*.pyc
+*.log

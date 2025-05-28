@@ -1,0 +1,40 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cv_sections\"}}]": "utter_cv_sections",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cv_sections\"}}, {\"prev_action\": {\"action_name\": \"utter_cv_sections\"}, \"user\": {\"intent\": \"ask_cv_sections\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search_jobs_by_field\"}}]": "utter_search_jobs",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search_jobs_by_field\"}}, {\"prev_action\": {\"action_name\": \"utter_search_jobs\"}, \"user\": {\"intent\": \"search_jobs_by_field\"}}]": "action_search_jobs",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search_jobs_by_field\"}}, {\"prev_action\": {\"action_name\": \"utter_search_jobs\"}, \"user\": {\"intent\": \"search_jobs_by_field\"}}, {\"prev_action\": {\"action_name\": \"action_search_jobs\"}, \"user\": {\"intent\": \"search_jobs_by_field\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cv_education\"}}]": "utter_cv_education",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cv_education\"}}, {\"prev_action\": {\"action_name\": \"utter_cv_education\"}, \"user\": {\"intent\": \"ask_cv_education\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cv_personal_info\"}}]": "utter_cv_personal_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cv_personal_info\"}}, {\"prev_action\": {\"action_name\": \"utter_cv_personal_info\"}, \"user\": {\"intent\": \"ask_cv_personal_info\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cv_experience\"}}]": "utter_cv_experience",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cv_experience\"}}, {\"prev_action\": {\"action_name\": \"utter_cv_experience\"}, \"user\": {\"intent\": \"ask_cv_experience\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cv_skills\"}}]": "utter_cv_skills",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cv_skills\"}}, {\"prev_action\": {\"action_name\": \"utter_cv_skills\"}, \"user\": {\"intent\": \"ask_cv_skills\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cv_description\"}}]": "utter_cv_description",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_cv_description\"}}, {\"prev_action\": {\"action_name\": \"utter_cv_description\"}, \"user\": {\"intent\": \"ask_cv_description\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search_jobs_by_field\"}}, {\"prev_action\": {\"action_name\": \"utter_search_jobs\"}, \"user\": {\"intent\": \"search_jobs_by_field\"}}]",
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search_jobs_by_field\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search_jobs_by_field\"}}, {\"prev_action\": {\"action_name\": \"utter_search_jobs\"}, \"user\": {\"intent\": \"search_jobs_by_field\"}}, {\"prev_action\": {\"action_name\": \"action_search_jobs\"}, \"user\": {\"intent\": \"search_jobs_by_field\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent back"
+    ]
+  }
+}
