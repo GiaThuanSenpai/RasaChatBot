@@ -631,3 +631,15 @@ nlu:
     - Hard skills cần ghi những gì?
     - Cách viết technical skills
     - Trình bày năng lực bản thân
+
+- intent: ask_subcriptions
+  examples: |
+    - Cách đăng ký nhận thông báo công việc mới
+    - Làm thế nào để nhận thông báo về việc làm mới?
+    - Hướng dẫn cách bật thông báo công việc trên trang web
+    - Tôi muốn nhận thông báo việc làm mới thì làm sao?
+    - Cách thiết lập nhận thông báo công việc theo email
+    - Làm cách nào để được thông báo khi có việc làm mới?
+    - Hướng dẫn đăng ký nhận tin tức về công việc mới
+    - Tôi phải làm gì để nhận thông báo công việc hàng ngày?
+    - Cách kích hoạt thông báo cho các công việc mới phù hợp

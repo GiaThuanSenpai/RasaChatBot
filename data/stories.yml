@@ -93,6 +93,11 @@ stories:
   - action: utter_cv_creation
   - action: utter_cv_creation_tips
 
+- story: subscriptions
+  steps:
+  - intent: ask_subcriptions
+  - action: utter_subcriptions
+
 - story: apply_job
   steps:
   - intent: apply_job

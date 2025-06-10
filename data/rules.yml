@@ -22,6 +22,11 @@ rules:
   - action: utter_search_jobs  # Thông báo đang tìm kiếm
   - action: action_search_jobs  # Thực thi tìm kiếm
   - action: action_listen
+  
+- rule: Handle apply job
+  steps:
+  - intent: apply_job
+  - action: utter_apply_job
 
 - rule: Trả lời về các phần CV khi được hỏi
   steps:
@@ -52,3 +57,8 @@ rules:
   steps:
   - intent: ask_cv_skills
   - action: utter_cv_skills
+
+- rule: Gọi khi không hiểu
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_fallback
