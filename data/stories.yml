@@ -117,3 +117,14 @@ stories:
   steps:
   - intent: employer_contact
   - action: utter_employer_contact
+- story: job search how
+  steps:
+  - intent: job_search_how
+  - action: utter_job_search_how
+
+- story: search jobs by field
+  steps:
+  - intent: search_jobs_by_field
+  - action: utter_search_jobs
+  - action: action_search_jobs
+  - action: action_listen

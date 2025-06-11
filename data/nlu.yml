@@ -140,6 +140,14 @@ nlu:
 
 - intent: search_jobs_by_field
   examples: |
+    - tìm việc [phân tích dữ liệu](specialization)
+    - tìm công việc [phân tích dữ liệu](specialization) ở [tphcm](location)
+    - tuyển dụng [phân tích dữ liệu](specialization) tại [hà nội](location)
+    - việc làm [phân tích dữ liệu](specialization) lương [20tr](salary)
+    - tìm việc [data analyst](specialization)
+    - tìm việc [data analysis](specialization) tại [đà nẵng](location)
+    - tìm việc [phân tích dữ liệu](specialization) [it phần mềm](industry)
+    - tìm công việc [phân tích data](specialization) ở [sài gòn](location) lương [25-30tr](salary)
     - tìm việc [thương mại điện tử](industry)
     - tìm công việc ngành [marketing](industry)
     - tìm việc làm [it phần cứng](industry)
@@ -519,6 +527,7 @@ nlu:
     - Cách nộp đơn cho một vị trí tuyển dụng
     - Hướng dẫn chi tiết cách nộp đơn việc làm
     - Làm thế nào để gửi đơn ứng tuyển?
+    - Tôi muốn ứng tuyển công việc thì làm sao?
 
 - intent: cv_creation
   examples: |
@@ -643,3 +652,71 @@ nlu:
     - Hướng dẫn đăng ký nhận tin tức về công việc mới
     - Tôi phải làm gì để nhận thông báo công việc hàng ngày?
     - Cách kích hoạt thông báo cho các công việc mới phù hợp
+  
+synonyms:
+  - value: phân tích dữ liệu
+    synonyms:
+      - data analysis
+      - data analyst
+      - phân tích data
+      - business intelligence
+      - data scientist
+  - value: it phần mềm
+    synonyms:
+      - software development
+      - lập trình
+      - phần mềm
+      - cntt
+      - công nghệ thông tin
+  - value: thương mại điện tử
+    synonyms:
+      - e-commerce
+      - tmdt
+      - mua sắm online
+      - sàn thương mại
+  - value: marketing
+    synonyms:
+      - tiếp thị
+      - digital marketing
+      - quảng cáo
+      - truyền thông
+  - value: thiết kế
+    synonyms:
+      - design
+      - graphic design
+      - ui/ux
+      - đồ họa
+  - value: kế toán
+    synonyms:
+      - accounting
+      - kiểm toán
+      - tài chính
+  - value: kinh doanh
+    synonyms:
+      - sales
+      - bán hàng
+      - thương mại
+  - value: y tế
+    synonyms:
+      - healthcare
+      - chăm sóc sức khỏe
+      - medical
+  - value: logistics
+    synonyms:
+      - chuỗi cung ứng
+      - vận tải
+      - supply chain
+  - value: luật
+    synonyms:
+      - pháp lý
+      - legal
+  - value: phiên dịch
+    synonyms:
+      - dịch thuật
+      - translation
+      - thông dịch
+  - value: hệ thống nhúng
+    synonyms:
+      - embedded systems
+      - iot
+      - firmware
